@@ -9,7 +9,8 @@
         android:id="@+id/homeFragment"
         android:name="net.simplifiedcoding.spendtracker.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 
     <fragment
         android:id="@+id/addSpendFragment"

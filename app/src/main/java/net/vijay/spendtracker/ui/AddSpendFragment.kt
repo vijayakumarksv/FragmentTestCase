@@ -2,6 +2,7 @@ package net.simplifiedcoding.spendtracker.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
@@ -22,7 +23,7 @@ class AddSpendFragment : BaseFragment(R.layout.fragment_add_spend) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAddSpendBinding.bind(view)
-
+        Log.e("getValue", requireArguments().getString("value",null))
         binding.editTextAmount.addTextChangedListener {
             amount = it.toString().trim().toIntOrNull() ?: 0
             binding.buttonAdd.enabled(Validator.validateInput(amount, description))

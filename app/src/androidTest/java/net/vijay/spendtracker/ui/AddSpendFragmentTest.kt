@@ -31,7 +31,7 @@ class AddSpendFragmentTest {
 
     @Test
     fun testAddingSpend() {
-        val amount = 1000
+        val amount = 100
         val desc = "Bought Eggs"
         //Espresso Matcher and Action
         onView(withId(R.id.edit_text_amount)).perform(typeText(amount.toString()))

@@ -28,7 +28,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
         }
 
         binding.buttonAddSpend.setOnClickListener {
-            findNavController().navigate(R.id.addSpendFragment)
+            var bundle = Bundle()
+            bundle.putString("value", "clicked")
+            findNavController().navigate(R.id.addSpendFragment, bundle)
         }
 
         viewModel.last20SpendsLiveData.observe(viewLifecycleOwner) { spends ->
